@@ -24,10 +24,6 @@ class TitanUser
         void ViewPaymentsDue();
         void ViewPaymentHistory();
         void DisplayAllPurchases();
-
-        //Test Case Functions
-        TitanUser(const string& name);
-        string GetName() { return m_Name; }
 };
 
 TitanUser :: TitanUser() //Initializer list for Default Constructor
@@ -46,10 +42,6 @@ TitanUser :: TitanUser(const string& name, const string& fullname, const string&
     , m_Password(password)
     , m_Country(country)
     , m_Address(address)
-{}
-
-TitanUser :: TitanUser(const string& name) //Parameterized Test-Case For Single Name Input
-    : m_Name (name)
 {}
 
 void CheckLogin()
@@ -140,10 +132,4 @@ void MenuDisplay()
 int main ()
 {
     MenuDisplay();
-
-    //Test Cases
-    TitanUser e0;
-    cout << e0.GetName() << endl;
-    TitanUser e1("Bob");
-    cout << e1.GetName() << endl;
 }
